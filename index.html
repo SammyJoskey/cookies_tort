@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Ваш город</title>
+</head>
+
+<body>
+
+    <div class="container">
+      <form>
+            <div class="form-group my-4">
+                <textarea type="text" class="form-control" id="area" placeholder="Введите ваш город" style= "font-size: 20px"></textarea>
+                <br>
+                <a onclick="localStorage.removeItem('area');area.value=''" href=''> Изменить город </a>
+            </div>
+        </form>
+
+        <h4 id='zag'>Сделайте выбор:</h4>
+        <form>
+            <div class="form-group my-4">
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="option1">
+                    <label class="form-check-label" for="Check1">я не хочу ставить эту галочку</label>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="option2">
+                    <label class="form-check-label" for="Check2">и эту тоже</label>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="option3">
+                    <label class="form-check-label" for="Check3">и эта мне не нравится</label>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="option4">
+                    <label class="form-check-label" for="Check4">я в этом точно уверен</label>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="option5">
+                    <label class="form-check-label" for="Check5">я устал</label>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="option6">
+                    <label class="form-check-label" for="Check6">я ухожу</label>
+                </div>
+                <button onclick='StoreBoxes()' type="button" class="btn btn-primary" id="btn_save">Сохранить</button>
+                <br>
+                <a id="delete" onclick='delete_choice()' href="">Изменить выбор </a>
+            </div>
+        </form>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src='./script.js'></script>
+
+</body>
+
+</html>
