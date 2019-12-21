@@ -8,7 +8,7 @@ localStorage.getItem('area') ? area.value = 'Ваш город - ' + localStorag
 
 function city () {
     if (localStorage.getItem('area') !== null) {
-        $("textarea").replaceWith(area.value);
+        $("textarea").replaceWith("<h3>" + (area.value) + "</h3>");
     }
 }
 
