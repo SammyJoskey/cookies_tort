@@ -8,10 +8,11 @@ localStorage.getItem('area') ? area.value = 'Ваш город - ' + localStorag
 
 function city () {
     if (localStorage.getItem('area') !== null) {
-        $("textarea").replaceWith("<h3>" + (area.value) + "</h3>");
+        $("textarea").replaceWith("<span>" + (area.value) + "</span>");
+        document.querySelector('span').style.backgroundColor= 'yellow';
+        document.querySelector('span').style.fontSize= '25px';
     }
 }
-
 
 $(document).ready(function() {
     console.log(area.value);
